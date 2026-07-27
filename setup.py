@@ -1,5 +1,5 @@
 from pathlib import Path
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 
 def read_requirements(path: str = "requirements.txt") -> list[str]:
@@ -18,6 +18,6 @@ def read_requirements(path: str = "requirements.txt") -> list[str]:
 
 setup(
     name="octo",
-    packages=find_packages(),
+    packages=find_namespace_packages(),
     install_requires=read_requirements(),
 )
